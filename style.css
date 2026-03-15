@@ -3129,3 +3129,14 @@ p.papiro-text.dropcap::first-letter {
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
+
+/* Refuerzo de espaciado para sección Diezmos */
+#logistica.section {
+  padding-top: 10rem;
+}
+
+@media (max-width: 768px) {
+  #logistica.section {
+    padding-top: 8rem;
+  }
+}
