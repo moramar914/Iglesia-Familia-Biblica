@@ -3124,3 +3124,8 @@ p.papiro-text.dropcap::first-letter {
     padding-top: 7rem;
   }
 }
+
+#logistica .tithe-box {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
