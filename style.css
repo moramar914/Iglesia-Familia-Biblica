@@ -3099,3 +3099,18 @@ p.papiro-text.dropcap::first-letter {
 .map-container:hover {
   transform: translateY(-5px);
 }
+
+/* Ajustes de espaciado para evitar traslape con navbar fijo */
+.section {
+  scroll-margin-top: 100px;
+}
+
+#logistica .tithe-box {
+  padding-top: 5rem;
+}
+
+@media (max-width: 768px) {
+  #logistica .tithe-box {
+    padding-top: 6rem;
+  }
+}
