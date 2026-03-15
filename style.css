@@ -3114,3 +3114,13 @@ p.papiro-text.dropcap::first-letter {
     padding-top: 6rem;
   }
 }
+
+#ubicacion.section {
+  padding-top: 8rem;
+}
+
+@media (max-width: 768px) {
+  #ubicacion.section {
+    padding-top: 7rem;
+  }
+}
