@@ -352,7 +352,7 @@ export const churchData = {
 
   servicio: {
 
-    liveUrl: "https://www.youtube.com/embed/live_stream?channel=CHANNEL_ID", // Reemplazar con URL real
+    liveUrl: "https://www.youtube.com/embed/live_stream?channel=UCEGlnargk6UPzg-ZZDi4MHQ", 
 
     archive: [
 
