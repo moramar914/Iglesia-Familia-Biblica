@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iglesia Bautista - Delicados Pastos</title>
+  <!-- Fuentes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+  <!-- Iconos FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- Navegación -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="logo">
+        <img src="/images/Logo%203.png" alt="Logo Iglesia Familia Bíblica" class="logo-img">
+        <span>IGLESIA FAMILIA BÍBLICA</span>
+      </a>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
+        <span class="hamburger-label">MENÚ</span>
+        <div class="hamburger-bars">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Panel de navegación desplegable -->
+  <div class="nav-overlay" id="nav-overlay">
+    <button class="nav-close-btn" id="nav-close-btn" aria-label="Cerrar menú">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <nav class="nav-panel">
+      <a href="#inicio" class="nav-panel-link">
+        <i class="fa-solid fa-house"></i> Inicio
+      </a>
+      <a href="#enseñanza" class="nav-panel-link">
+        <i class="fa-solid fa-book-open"></i> Enseñanza
+      </a>
+      <a href="#devocionales" class="nav-panel-link">
+        <i class="fa-solid fa-scroll"></i> Devocionales
+      </a>
+      <a href="#familia" class="nav-panel-link">
+        <i class="fa-solid fa-people-group"></i> Compartiendo Juntos
+      </a>
+      <a href="#misiones" class="nav-panel-link">
+        <i class="fa-solid fa-globe"></i> Misiones
+      </a>
+      <a href="#servicios" class="nav-panel-link">
+        <i class="fa-solid fa-calendar-check"></i> Calendario - Oportunidades de Servicio
+      </a>
+      <a href="#apoyo" class="nav-panel-link">
+        <i class="fa-solid fa-file-invoice"></i> Material de Apoyo
+      </a>
+      <a href="#alabanza" class="nav-panel-sublink">
+        <i class="fa-solid fa-music"></i> Alabanza
+      </a>
+      <a href="#logistica" class="nav-panel-link">
+        <i class="fa-solid fa-hand-holding-heart"></i> Diezmos
+      </a>
+      <a href="#ubicacion" class="nav-panel-link">
+        <i class="fa-solid fa-location-dot"></i> ¿Donde encontrarnos?
+      </a>
+    </nav>
+    <div class="nav-overlay-footer">
+      <p>Iglesia Familia Bíblica</p>
+      <small>Donde Cristo es el centro</small>
+    </div>
+  </div>
+  <div class="nav-backdrop" id="nav-backdrop"></div>
+
+  <!-- Hero Section -->
+  <header class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-up">
+      <h1>En lugares de delicados pastos me hará descansar;</h1>
+      <p>Junto a aguas de reposo me pastoreará...</p>
+      <button id="btn-conocenos" class="btn-primary hero-btn">Conócenos más</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Enseñanza y Servicios -->
+    <section id="enseñanza" class="section bg-organic relative">
+      <!-- Top Wave Divider -->
+      <div class="wave-divider-top">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+      </div>
+      <div class="container fade-up">
+        <h2 class="section-title">Enseñanza Bíblica</h2>
+
+        <div class="main-teaching-content">
+          <!-- Servicio En Vivo / Video (Centrado y Destacado) -->
+          <!-- Servicio En Vivo / Video (Centrado y Destacado) -->
+          <div class="card elevated featured-video" id="servicio-card" style="padding: 0; overflow: hidden;">
+            <!-- Estado Offline (Mostrado por defecto cuando no hay transmisión viva válida) -->
+            <div id="live-offline" class="live-offline-state">
+              <div class="offline-content">
+                <i class="fa-solid fa-tower-broadcast mb-1" style="font-size: 2.5rem; color: var(--color-sand);"></i>
+                <h3 style="color: white; margin-bottom: 0.5rem;">Próxima Transmisión en Vivo</h3>
+                <p class="text-sand mb-1" style="font-size: 1.1rem;">Acompáñanos cada Domingo a las 10:00 AM</p>
+                <p class="text-sm" style="color: rgba(255,255,255,0.8);">Mientras tanto, explora nuestro archivo de enseñanzas más abajo.</p>
+              </div>
+            </div>
+
+            <!-- Contenedor del Iframe (Oculto) -->
+            <div id="live-online" class="hidden" style="padding: 2.5rem;">
+              <h3>Servicios EN VIVO</h3>
+              <div class="video-wrapper">
+                <iframe id="live-video" width="100%" height="315" src="" title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <p class="mt-1 text-sm color-earth">Acompáñanos en vivo todos los domingos o mira nuestros últimos mensajes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Archivos y Escuela (Ancho Completo) -->
+          <div class="teaching-archive" style="padding-bottom: 3.5rem;">
+            <div class="card mb-2" id="series-card" style="padding: 1.5rem;">
+              <h3 class="archivo-titulo">Series de Prédicas</h3>
+              
+              <!-- Componente de Pestañas (Tabs) -->
+              <div class="tabs-container">
+                <div class="tabs-wrapper" id="series-tabs">
+                  <!-- Inyectado via JS -->
+                </div>
+              </div>
+
+              <!-- Contenido de las Series (Cuadrícula de videos) -->
+              <div class="tab-content" id="series-content">
+                <!-- Inyectado via JS -->
+              </div>
+              
+              <!-- Llamado a la acción YouTube Flotante (Sin Cajas) -->
+              <div class="youtube-promo mt-3 mb-3 text-center">
+                <h4 class="youtube-statement">¡Hay mucho más por aprender!</h4>
+                <p class="text-sm mb-2" style="font-size: 1.1rem; opacity: 0.85;">Para recibir nuestro contenido más reciente cada semana, suscríbete a nuestro canal oficial.</p>
+                <a href="https://www.youtube.com/@familiabiblica516/videos" target="_blank" class="btn-magnetic">
+                  <i class="fa-brands fa-youtube youtube-icon-large"></i> Visitar Canal de YouTube
+                </a>
+              </div>
+            </div>
+
+      <!-- Bottom Wave Divider -->
+      <div class="wave-divider-bottom" style="z-index: 2;">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill" style="fill: #fdfbf7;"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Sección de Devocionales (Estilo Libro Antiguo) -->
+    <section id="devocionales" class="section bg-pergamino relative">
+      <div class="container" style="max-width: 900px;">
+        <h2 class="section-title text-center" style="margin-bottom: 1rem;"><i class="fa-solid fa-feather-pointed" style="color: var(--color-earth); margin-right: 15px;"></i> Devocionales Diarios</h2>
+        <p class="text-center text-sm mb-3">"Lámpara es a mis pies tu palabra, Y lumbrera a mi camino." <br>— Salmos 119:105</p>
+        
+        <div class="devocionales-wrapper relative" style="position: relative;">
+          <!-- Flecha Izquierda -->
+          <button id="dev-prev" class="btn-scroll-arrow arrow-left" aria-label="Página Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          
+          <div id="devocionales-container" class="devocionales-book">
+            <!-- Inyectado via JS -->
+          </div>
+
+          <!-- Flecha Derecha -->
+          <button id="dev-next" class="btn-scroll-arrow arrow-right" aria-label="Página Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- Nuestra Familia (Álbum de Corcho Interactivo) -->
+    <section id="familia" class="section bg-cork relative">
+      <div class="container">
+        <h2 class="section-title text-center" style="color: #fff; text-shadow: 0 4px 10px rgba(0,0,0,0.5); font-size: 3.5rem;">Compartiendo Juntos</h2>
+        <p class="text-center" style="color: rgba(255,255,255,0.9); font-weight: 500; font-style: italic; font-size: 1.1rem; margin-bottom: 60px;">
+          "Porque donde están dos o tres reunidos en mi nombre, allí estoy yo en medio de ellos" <br> <strong>Mt 18:20</strong>
+        </p>
+        
+        <div class="album-board">
+          <!-- Polaroid 1: Servicio Dominical -->
+          <div class="polaroid" data-aos="fade-up">
+            <div class="polaroid-inner">
+              
+              <img src="/images/El servicio.png" alt="Servicio Dominical Real">
+              <div class="polaroid-caption">
+                <h4>Servicio dominical</h4>
+                <p>"no dejando de congregarnos, como algunos tienen por costumbre, sino exhortándonos; y tanto más, cuanto veis que aquel día se acerca." <br> <strong>Hebreos 10:25</strong></p>
+                <div class="polaroid-extra">
+                  <p>La cita es cada domingo 11 am, acompañanos y alabemos juntos al Señor !</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Polaroid 2: Grupos Pequeños -->
+          <div class="polaroid" data-aos="fade-up">
+            <div class="polaroid-inner">
+              
+              <!-- Cuadrícula interna para evitar cortes de rostros -->
+              <div class="polaroid-collage">
+                <img src="/images/grupo hector.png" style="object-position: center top;">
+                <img src="/images/grupo normandia.png" style="object-position: center top;">
+                <img src="/images/grupo normandia 2.png" style="object-position: center top;">
+                <img src="/images/grupo bachue.png" style="object-position: center 10%;">
+              </div>
+              <div class="polaroid-caption">
+                <h4>Grupos Pequeños</h4>
+                <p>"Y perseverando unánimes cada día en el templo, y partiendo el pan en las casas, comían juntos con alegría y sencillez de corazón," <br> <strong>Hechos 2:46</strong></p>
+                <div class="polaroid-extra">
+                  <p>Acompañanos cada sabado en nuestros grupos pequeños</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Polaroid 3: Niños -->
+          <div class="polaroid" data-aos="fade-up">
+            <div class="polaroid-inner">
+              
+              <img src="/images/Niños.jpeg" alt="Clase Niños Reales">
+              <div class="polaroid-caption">
+                <h4>Clase de Niños</h4>
+                <p>"Instruye al niño en su camino, y aun cuando fuere viejo no se apartará de él" <br> <strong>Proverbios 22:6</strong></p>
+                <div class="polaroid-extra">
+                  <p>Cada domingo nuestros niños comparten y aprenden del evangelio con manualidades y actividades divertidas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Polaroid 4: Escuela dominical para hombres -->
+          <div class="polaroid" data-aos="fade-up">
+            <div class="polaroid-inner">
+              
+              <img src="/images/hombres.png" alt="Escuela Dominical Hombres">
+              <div class="polaroid-caption">
+                <h4>Escuela dominical para hombres</h4>
+                <p>"Estén alerta. Permanezcan firmes en la fe. Sean valientes. Sean fuertes. Y hagan todo con amor." <br> <strong>1 Corintios 16:13-14</strong></p>
+                <div class="polaroid-extra">
+                  <p>Hombres valientes en formación bíblica y compañerismo cada domingo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Polaroid 5: Escuela dominical para mujeres -->
+          <div class="polaroid" data-aos="fade-up">
+            <div class="polaroid-inner">
+              
+              <img src="/images/mujeres.png" alt="Escuela Dominical Mujeres">
+              <div class="polaroid-caption">
+                <h4>Escuela dominical para mujeres</h4>
+                <p>"Mujer virtuosa, ¿quién la hallará? Porque su estima sobrepasa largamente a la de las piedras preciosas" <br> <strong>Proverbios 31:10</strong></p>
+                <div class="polaroid-extra">
+                  <p>Domingo a domingo entorno a la palabra nos edificamos unas a otras</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Polaroid 6: Clase para adolescentes -->
+          <div class="polaroid" data-aos="fade-up">
+            <div class="polaroid-inner">
+              
+              <img src="/images/familia/adolescentes_reales.png" alt="Adolescentes Reales">
+              <div class="polaroid-caption">
+                <h4>Clase para adolescentes</h4>
+                <p>"Alégrate, joven, en tu juventud, y tome placer tu corazón en los días de tu adolescencia... pero sabe, que sobre todas estas cosas te juzgará Dios." <br> <strong>Eclesiastes 11:9</strong></p>
+                <div class="polaroid-extra">
+                  <p>Comparte entre tus pares en un espacio sano de edificacion, cada domingo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Polaroid 7: Campamentos -->
+          <div class="polaroid polaroid-rot-l" data-aos="fade-up">
+            <div class="polaroid-inner">
+              
+              <img src="/images/campamentos collage.png" alt="Campamentos">
+              <div class="polaroid-caption">
+                <h4>Campamentos</h4>
+                <p>"Entonces les dijo: Vayan por todo el mundo y prediquen la buena noticia a todos." <br> <strong>Marcos 16:15</strong></p>
+                <div class="polaroid-extra">
+                  <p>Tiempos inolvidables compartiendo y extendiendo el mensaje de salvación.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Misiones (Amor en Acción) -->
+    <section id="misiones" class="section bg-misiones relative">
+      <div class="wave-divider-top">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill" style="fill: var(--color-light);"></path>
+        </svg>
+      </div>
+      
+      <div class="container fade-up">
+        <h2 class="section-title text-center">Amor en Acción</h2>
+        <p class="text-center mb-1" style="color: var(--color-earth); font-style: italic; font-size: 1.1rem;">
+          "Y les dijo: Id por todo el mundo y predicad el evangelio a toda criatura." — Marcos 16:15
+        </p>
+        <p class="text-center mb-4" style="max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.8;">
+          Nuestra labor misionera es el reflejo de la Gran Comisión, llevando la luz de Cristo a rincones cercanos y lejanos con amor, respeto y servicio desinteresado.
+        </p>
+
+        <div id="misiones-grid" class="misiones-grid">
+          <!-- Inyectado dinámicamente vía JS -->
+        </div>
+      </div>
+      
+      <div class="wave-divider-bottom">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill" style="fill: var(--color-light);"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Oportunidades de Servicio (Calendario) -->
+    <section id="servicios" class="section bg-light">
+      <div class="container fade-up">
+        <h2 class="section-title text-center" style="font-size: 3rem;">Calendario</h2>
+        <p class="text-center" style="color: var(--color-earth); margin-bottom: 2rem; font-style: italic;">
+          "Cada uno ponga al servicio de los demás el don que haya recibido" — 1 Pedro 4:10
+        </p>
+
+        <!-- Calendario Header -->
+        <div class="cal-header">
+          <button class="cal-nav-btn" id="cal-prev"><i class="fa-solid fa-chevron-left"></i></button>
+          <h3 class="cal-month-label" id="cal-month-label">—</h3>
+          <button class="cal-nav-btn" id="cal-next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Grid del Calendario -->
+        <div class="cal-grid-wrapper">
+          <div class="cal-day-headers">
+            <span>Lun</span><span>Mar</span><span>Mié</span>
+            <span>Jue</span><span>Vie</span><span>Sáb</span>
+            <span class="cal-sunday">Dom</span>
+          </div>
+          <div class="cal-grid" id="cal-grid">
+            <!-- Generado por JS -->
+          </div>
+        </div>
+
+
+        <!-- Leyenda inferior en 3 columnas -->
+        <div class="cal-legend-bottom">
+          <h4 class="cal-legend-title"><i class="fa-solid fa-circle-info"></i> Referencias</h4>
+          <div class="cal-legend-cols" id="cal-legend">
+            <!-- Las 3 columnas se generan dinámicamente por JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+    <!-- Sección Material de Apoyo -->
+    <section id="apoyo" class="section bg-apoyo relative">
+      <div class="container fade-up">
+        <h2 class="section-title text-center">Material de Apoyo</h2>
+        <p class="text-center mb-3" style="color: var(--color-earth); font-style: italic; max-width: 600px; margin-left: auto; margin-right: auto;">
+          "Lo que has oído de mí ante muchos testigos, esto encarga a hombres fieles que sean idóneos para enseñar también a otros." — 2 TIMOTEO 2:2
+        </p>
+
+        <!-- Ruta de Crecimiento -->
+        <div class="ruta-crecimiento-container fade-up">
+          <img src="/images/ruta-crecimiento.png" alt="Ruta de Crecimiento de la Iglesia Familia Bíblica" class="ruta-crecimiento-img" loading="lazy">
+        </div>
+        
+        <div id="material-grid" class="material-grid mt-4">
+          <!-- Inyectado via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Subsección Alabanza -->
+    <section id="alabanza" class="section bg-light relative" style="padding-top: 2rem;">
+      <div class="container fade-up">
+        <h2 class="section-title text-center" style="margin-top: 1rem;">Alabanza</h2>
+        <p class="text-center mb-3" style="color: var(--color-earth); font-style: italic; max-width: 600px; margin-left: auto; margin-right: auto;">
+          "Cantaré a Jehová en mi vida; A mi Dios cantaré salmos mientras viva." — Salmos 104:33
+        </p>
+        <div id="alabanza-content" class="text-center mt-4">
+          <p class="text-sm opacity-75">Próximamente: Recursos y material de alabanza.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logistica / Diezmos -->
+    <section id="logistica" class="section bg-dark text-white text-center">
+      <div class="container fade-up">
+          <div class="tithe-box" style="max-width: 600px; margin: 0 auto;">
+            <h2 class="mb-1 text-sand">Diezmos y Ofrendas</h2>
+            <p class="mb-3 text-sand" style="line-height:1.5; font-size: 1.2rem; opacity: 0.95;">
+              <em>"Cada uno dé como propuso en su corazón: no con tristeza, ni por necesidad, porque Dios ama al dador alegre."</em><br>
+              <strong style="display: inline-block; margin-top: 8px; font-size: 1rem; color: #c9dfd3;">— 2 Corintios 9:7</strong>
+            </p>
+            
+            <div id="qr-container" class="qr-box mt-1" style="display: inline-block;">
+              <img id="qr-img" src="/images/QR.jpeg" alt="QR Diezmos" style="max-width: 200px; border-radius: 8px;">
+            </div>
+            
+            <div class="bank-details mt-2 text-sand" style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; border: 1px dashed rgba(255,255,255,0.2);">
+              <p class="text-sm mb-0"><i class="fa-solid fa-building-columns"></i> <strong>Transferencia Bancaria</strong></p>
+              <p class="text-sm mb-0" style="font-size: 1.1rem; opacity: 0.9;">Banco Caja Social - Ahorros<br><strong>2408 4207 689</strong></p>
+            </div>
+          </div>
+      </div>
+    </section>
+    <!-- Sección ¿Donde encontrarnos? -->
+    <section id="ubicacion" class="section bg-light">
+      <div class="container fade-up text-center">
+        <h2 class="section-title">¿Donde encontrarnos?</h2>
+        <div class="contact-details mb-4">
+          <p class="location-text"><i class="fa-solid fa-location-dot"></i> <span id="church-location-new"></span></p>
+          <p class="email-text"><i class="fa-solid fa-envelope"></i> <span id="church-email-new"></span></p>
+        </div>
+        
+        <div class="map-container shadow-lg" style="border-radius: 20px; overflow: hidden; height: 450px;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.514732151608!2d-74.11306162413156!3d4.679122141505323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b7c8f9b9f9f%3A0x7f9f9f9f9f9f9f9f!2sCra.%2071b%20%2354-16%2C%20Normand%C3%ADa%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1710370000000!5m2!1ses!2sco" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer bg-primary">
+    <div class="container text-center">
+      <p>&copy; <span id="year"></span> Iglesia Cristiana Bautista Misionera.</p>
+    </div>
+  </footer>
+
+  <!-- Modal Conócenos Más (Estilo Papiro) -->
+  <div id="conocenos-modal" class="modal-overlay">
+    <div class="modal-papiro">
+      <button id="close-conocenos" class="modal-close-btn" aria-label="Cerrar">&times;</button>
+      <div class="papiro-content">
+        <h2 class="papiro-title">Nuestra Identidad</h2>
+        <p class="papiro-text dropcap">
+          Somos una familia de fe que reconoce su identidad en la gracia del Dios Trino: Padre, Hijo y Espíritu Santo. Como discípulos llamados a caminar en Su nombre, profesamos que nuestra verdadera prosperidad no se mide por los bienes materiales, sino por la riqueza del espíritu y la plenitud de una vida transformada a la imagen de Cristo.
+        </p>
+        <p class="papiro-text">
+          Entendemos con claridad que no se puede servir a dos señores; por ello, elegimos no poner nuestra confianza en las riquezas de este mundo, sino en la soberanía de aquel de quien, por quien y para quien son todas las cosas.
+        </p>
+        <p class="papiro-text">
+          Nuestra vida es un estilo de vida continuo de servicio, donde todo es espiritual y cada acción es una ofrenda de adoración en espíritu y en verdad. Como comunidad relacional, intencional y enseñable, aspiramos a vivir con la humildad de quien lava los pies de su hermano, sabiendo que:
+        </p>
+        <blockquote class="papiro-quote">
+          "Ninguno puede servir a dos señores; porque o aborrecerá al uno y amará al otro, o estimará al uno y menospreciará al otro. No podéis servir a Dios y a las riquezas."
+          <cite>— Mateo 6:24</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup flotante del calendario (en la raíz para evitar problemas de transform) -->
+  <div class="cal-popup" id="cal-popup">
+    <div class="cal-popup-inner" id="cal-popup-inner"></div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
