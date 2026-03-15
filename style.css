@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   /* Warm Green / Earth Palette */
   --color-primary: #3c6e47;
   /* Deep green */
@@ -1520,6 +1520,11 @@ ul {
   background: #eee;
   border: 1px solid #eee;
   overflow: hidden;
+}
+
+.polaroid-collage.collage-2 {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .polaroid-collage img {
