@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Navegación por secciones (SPA)
-    const navLinksElems = document.querySelectorAll('.nav-panel-link, .hero-btn, .logo');
+    const navLinksElems = document.querySelectorAll('.nav-panel-link, .nav-panel-sublink, .hero-btn, .logo');
     const sectionElems = document.querySelectorAll('.section');
     const heroSection = document.getElementById('inicio');
 
@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navOverlay   = document.getElementById('nav-overlay');
     const navBackdrop  = document.getElementById('nav-backdrop');
     const navCloseBtn  = document.getElementById('nav-close-btn');
-    const navPanelLinks = document.querySelectorAll('.nav-panel-link');
+    const navPanelLinks = document.querySelectorAll('.nav-panel-link, .nav-panel-sublink');
 
     function openMenu() {
         hamburgerBtn.classList.add('open');
@@ -753,6 +753,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     window.open(`https://wa.me/?text=${shareText}`, "_blank");
                 }
             }
+        });
+    }
+
+    // --- ALABANZA (Pistas y Karaokes de YouTube) ---
+    const alabanzaGrid = document.getElementById("alabanza-grid");
+    if (alabanzaGrid && churchData.alabanza) {
+        churchData.alabanza.forEach(v => {
+            const card = document.createElement("a");
+            card.href = v.url;
+            card.target = "_blank";
+            card.className = "alabanza-video-card";
+            card.innerHTML = `
+                <img class="video-thumb" src="${v.thumb}" alt="${v.title}" loading="lazy">
+                <div class="video-info">
+                    <p class="video-title">${v.title}</p>
+                </div>
+            `;
+            alabanzaGrid.appendChild(card);
         });
     }
 });

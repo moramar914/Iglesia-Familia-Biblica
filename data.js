@@ -335,6 +335,18 @@ export const churchData = {
     }
 
   ],
+  
+  alabanza: [
+    { id: "t8Yfbni3f5o", title: "Alabaré al Señor video - audio", url: "https://www.youtube.com/watch?v=t8Yfbni3f5o", thumb: "https://img.youtube.com/vi/t8Yfbni3f5o/hqdefault.jpg" },
+    { id: "kM7O0DJOREE", title: "Alabaré al Señor video - pista", url: "https://www.youtube.com/watch?v=kM7O0DJOREE", thumb: "https://img.youtube.com/vi/kM7O0DJOREE/hqdefault.jpg" },
+    { id: "OAuG2GxJYFM", title: "Amor sin condición - pista + voz", url: "https://www.youtube.com/watch?v=OAuG2GxJYFM", thumb: "https://img.youtube.com/vi/OAuG2GxJYFM/hqdefault.jpg" },
+    { id: "ULIWRIBFDGI", title: "Cuanto nos ama Video  pista+voz", url: "https://www.youtube.com/watch?v=ULIWRIBFDGI", thumb: "https://img.youtube.com/vi/ULIWRIBFDGI/hqdefault.jpg" },
+    { id: "75eRdB4QjYo", title: "Cuanto nos ama Video - Pista", url: "https://www.youtube.com/watch?v=75eRdB4QjYo", thumb: "https://img.youtube.com/vi/75eRdB4QjYo/hqdefault.jpg" },
+    { id: "1jeiUqYh91c", title: "Reinas por la eternidad - pista - voz", url: "https://www.youtube.com/watch?v=1jeiUqYh91c", thumb: "https://img.youtube.com/vi/1jeiUqYh91c/hqdefault.jpg" },
+    { id: "yhlQVwai9CM", title: "Yo también -  Pista", url: "https://www.youtube.com/watch?v=yhlQVwai9CM", thumb: "https://img.youtube.com/vi/yhlQVwai9CM/hqdefault.jpg" },
+    { id: "-b5fP48hYuE", title: "Yo también-pista y voz", url: "https://www.youtube.com/watch?v=-b5fP48hYuE", thumb: "https://img.youtube.com/vi/-b5fP48hYuE/hqdefault.jpg" },
+    { id: "7z1OPuBXy6c", title: "Reinas por la eternidad - Pista", url: "https://www.youtube.com/watch?v=7z1OPuBXy6c", thumb: "https://img.youtube.com/vi/7z1OPuBXy6c/hqdefault.jpg" }
+  ],
 
 
 
