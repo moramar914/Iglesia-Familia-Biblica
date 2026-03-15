@@ -268,11 +268,17 @@ document.addEventListener("DOMContentLoaded", () => {
         if (targetId === '#inicio' || targetId === '#') {
             heroSection.classList.remove('hidden');
             sectionElems.forEach(sec => sec.classList.remove('active'));
+            // Activar animaciones en el hero manualmente
+            heroSection.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
         } else {
             heroSection.classList.add('hidden');
             sectionElems.forEach(sec => {
                 if (`#${sec.id}` === targetId) {
                     sec.classList.add('active');
+                    // ACTIVAR ANIMACIONES AUTOMÁTICAMENTE:
+                    // Buscamos todos los elementos que deberían animarse dentro de esta sección
+                    // y les añadimos la clase 'visible' de inmediato para evitar que se vea vacío.
+                    sec.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
                 } else {
                     sec.classList.remove('active');
                 }
