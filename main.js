@@ -713,7 +713,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (materialGrid && churchData.materialApoyo) {
         churchData.materialApoyo.forEach(item => {
             const card = document.createElement("div");
-            card.className = "material-card";
+            card.className = "material-card fade-up"; // Agregamos fade-up
             card.innerHTML = `
                 <span class="material-type">${item.type}</span>
                 <div class="material-icon-box" style="color: ${item.color}">
@@ -734,6 +734,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
             materialGrid.appendChild(card);
+            
+            // Observar el nuevo card para la animación
+            if (typeof observer !== 'undefined') {
+                observer.observe(card);
+            }
         });
 
         // Lógica de compartir (Web Share API)
@@ -745,11 +750,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Convertir URL relativa a absoluta para compartir fuera del sitio
                 if (url && !url.startsWith('http')) {
-                    // Obtener la base de la URL actual (ej: https://site.com/subpath/)
+                    // Normalizar ruta: quitar ./ inicial si existe
+                    const cleanPath = url.startsWith('./') ? url.substring(2) : url;
+                    
                     const baseUrl = window.location.href.split('#')[0];
-                    // Asegurarse de que no termine en index.html
                     const pathFix = baseUrl.endsWith('/') ? baseUrl : baseUrl.substring(0, baseUrl.lastIndexOf('/') + 1);
-                    url = pathFix + url;
+                    url = pathFix + cleanPath;
                 }
 
                 if (navigator.share) {
