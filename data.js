@@ -23,7 +23,7 @@ export const churchData = {
       id: "fundamentos-firmes",
       title: "Fundamentos Firmes",
       description: "Material insignia de nuestra iglesia sobre los cimientos de la fe cristiana y la doctrina bíblica.",
-      url: "/docs/fundamentos_firmes.pdf",
+      url: "docs/fundamentos_firmes.pdf",
       type: "PDF",
       icon: "fa-file-pdf",
       color: "#e74c3c"
@@ -32,7 +32,7 @@ export const churchData = {
       id: "hombre-piadoso",
       title: "La Imagen del Hombre Piadoso",
       description: "Un estudio detallado sobre el carácter y la conducta bíblica del hombre que busca honrar a Dios.",
-      url: "/docs/hombre_piadoso.pdf",
+      url: "docs/hombre_piadoso.pdf",
       type: "PDF",
       icon: "fa-file-pdf",
       color: "#e74c3c"

@@ -722,12 +722,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h3>${item.title}</h3>
                 <p>${item.description}</p>
                 <div class="material-actions">
-                    <a href="${item.url}" class="btn-apoyo btn-download" title="Descargar archivo">
+                    <a href="${item.url}" class="btn-apoyo btn-download" download="${item.title}.pdf" title="Descargar archivo">
                         <i class="fa-solid fa-download"></i> Descargar
                     </a>
                     <button class="btn-apoyo btn-share-alt" 
                             data-title="${item.title}" 
-                            data-url="${window.location.href}" 
+                            data-url="${item.url}" 
                             title="Compartir material">
                         <i class="fa-solid fa-share-nodes"></i> Compartir
                     </button>
@@ -741,7 +741,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const shareBtn = e.target.closest(".btn-share-alt");
             if (shareBtn) {
                 const title = shareBtn.getAttribute("data-title");
-                const url = shareBtn.getAttribute("data-url");
+                let url = shareBtn.getAttribute("data-url");
+
+                // Convertir URL relativa a absoluta para compartir fuera del sitio
+                if (url && !url.startsWith('http')) {
+                    // Obtener la base de la URL actual (ej: https://site.com/subpath/)
+                    const baseUrl = window.location.href.split('#')[0];
+                    // Asegurarse de que no termine en index.html
+                    const pathFix = baseUrl.endsWith('/') ? baseUrl : baseUrl.substring(0, baseUrl.lastIndexOf('/') + 1);
+                    url = pathFix + url;
+                }
 
                 if (navigator.share) {
                     try {
