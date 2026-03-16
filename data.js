@@ -20,31 +20,22 @@ export const churchData = {
   
   materialApoyo: [
     {
-      id: "guia-estudio-01",
-      title: "Guía de Estudio: Las Bienaventuranzas",
-      description: "Un recorrido profundo por el sermón del monte para estudiar en casa o en grupos pequeños.",
-      url: "#", 
+      id: "fundamentos-firmes",
+      title: "Fundamentos Firmes",
+      description: "Material insignia de nuestra iglesia sobre los cimientos de la fe cristiana y la doctrina bíblica.",
+      url: "/docs/fundamentos_firmes.pdf",
       type: "PDF",
       icon: "fa-file-pdf",
       color: "#e74c3c"
     },
     {
-      id: "bosquejo-sermon-finanzas",
-      title: "Bosquejo: Mayordomía Cristiana",
-      description: "Puntos clave y versículos de referencia del último sermón sobre finanzas bíblicas.",
-      url: "#",
-      type: "DOCX",
-      icon: "fa-file-word",
-      color: "#2980b9"
-    },
-    {
-      id: "plan-lectura-anual",
-      title: "Plan de Lectura Bíblica 2025",
-      description: "Cronograma diario para leer toda la Biblia en un año. Mantén tu fe alimentada cada día.",
-      url: "#",
+      id: "hombre-piadoso",
+      title: "La Imagen del Hombre Piadoso",
+      description: "Un estudio detallado sobre el carácter y la conducta bíblica del hombre que busca honrar a Dios.",
+      url: "/docs/hombre_piadoso.pdf",
       type: "PDF",
-      icon: "fa-calendar-days",
-      color: "#27ae60"
+      icon: "fa-file-pdf",
+      color: "#e74c3c"
     }
   ],
 
