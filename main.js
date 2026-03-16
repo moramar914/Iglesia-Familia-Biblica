@@ -748,14 +748,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 const title = shareBtn.getAttribute("data-title");
                 let url = shareBtn.getAttribute("data-url");
 
-                // Convertir URL relativa a absoluta para compartir fuera del sitio
+                // Convertir URL a absoluta para compartir fuera del sitio
                 if (url && !url.startsWith('http')) {
-                    // Normalizar ruta: quitar ./ inicial si existe
-                    const cleanPath = url.startsWith('./') ? url.substring(2) : url;
-                    
-                    const baseUrl = window.location.href.split('#')[0];
-                    const pathFix = baseUrl.endsWith('/') ? baseUrl : baseUrl.substring(0, baseUrl.lastIndexOf('/') + 1);
-                    url = pathFix + cleanPath;
+                    // Combinar el origen actual con la ruta del archivo
+                    // Esto funcionará tanto en localhost como en GitHub Pages
+                    url = window.location.origin + url;
                 }
 
                 if (navigator.share) {

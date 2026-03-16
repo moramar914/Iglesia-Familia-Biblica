@@ -2507,6 +2507,7 @@ ul {
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.4s ease;
+  pointer-events: none; /* Permitir clics en los elementos internos */
 }
 
 .material-card:hover {
@@ -3231,6 +3232,9 @@ p.papiro-text.dropcap::first-letter {
 }
 /* Fix: Badge LECTURA no tape la fecha en móvil */
 @media (max-width: 768px) {
+  .devocionales-wrapper {
+    padding: 0 5px; /* Reducir margen lateral del contenedor p/ ganar espacio */
+  }
   .devocional-number {
     position: relative;
     top: auto;
@@ -3243,10 +3247,25 @@ p.papiro-text.dropcap::first-letter {
     padding: 4px 14px;
   }
   .devocional-card {
-    padding-top: 1.5rem;
+    flex: 0 0 97%; /* Mayor ancho en celular */
+    padding: 1.5rem 1rem 2rem 1rem; /* Padding horizontal reducido */
+    height: auto; /* Permitir que la altura se ajuste al contenido si es necesario */
+    max-height: 700px; /* Pero con un limite para mantener el estilo */
+  }
+  .devocional-card h3 {
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 1.6rem;
+    padding-bottom: 0.8rem;
+  }
+  .devocional-body {
+    padding-right: 5px; /* Menos espacio para el scroll interno */
+    font-size: 1.1rem;
   }
   .devocional-meta {
     margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
   }
 }
 /* ==========================================
