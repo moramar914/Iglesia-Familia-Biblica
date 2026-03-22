@@ -3352,3 +3352,41 @@ p.papiro-text.dropcap::first-letter {
     gap: 15px;
   }
 }
+
+/* Botón de Respaldo YouTube Live */
+.btn-live-fallback {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ff0000;
+  color: #ffffff !important;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+  margin: 1rem 0;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.95rem;
+}
+
+.btn-live-fallback:hover {
+  background-color: #cc0000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+}
+
+.btn-live-fallback i {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .btn-live-fallback {
+    width: 90%;
+    justify-content: center;
+    padding: 1rem;
+  }
+}

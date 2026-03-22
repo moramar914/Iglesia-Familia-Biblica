@@ -24,7 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         if (liveOffline) liveOffline.classList.add("hidden");
         if (liveOnline) liveOnline.classList.remove("hidden");
-        document.getElementById("live-video").src = liveUrl;
+        const videoElement = document.getElementById("live-video");
+        videoElement.src = liveUrl;
+        
+        // Botón de respaldo directo a YouTube
+        const liveBtn = document.getElementById("live-url-btn");
+        if (liveBtn) {
+            // Convertimos la URL de embed a URL de video normal para canal en vivo
+            // O simplemente usamos la URL original si la tenemos
+            const watchUrl = liveUrl.replace("www.youtube.com/embed/", "www.youtube.com/watch?v=");
+            liveBtn.href = watchUrl;
+        }
     }
 
     // Enseñanza - Series de YouTube (Pestañas)
